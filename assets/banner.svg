@@ -1,0 +1,101 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#182e70"/>
+      <stop offset="45%" stop-color="#0f1d4a"/>
+      <stop offset="100%" stop-color="#070d24"/>
+    </radialGradient>
+
+    <!-- Silver Metallic Gradient -->
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="25%" stop-color="#CBD5E1"/>
+      <stop offset="50%" stop-color="#F8FAFC"/>
+      <stop offset="75%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Corner Mandala Pattern -->
+    <g id="mandalaCorner" opacity="0.12">
+      <circle cx="0" cy="0" r="160" stroke="#93C5FD" stroke-width="1.5" stroke-dasharray="4 6"/>
+      <circle cx="0" cy="0" r="130" stroke="#93C5FD" stroke-width="2"/>
+      <circle cx="0" cy="0" r="100" stroke="#93C5FD" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <circle cx="0" cy="0" r="70" stroke="#93C5FD" stroke-width="2"/>
+      <path d="M 0 0 L 140 40 M 0 0 L 120 80 M 0 0 L 80 120 M 0 0 L 40 140" stroke="#93C5FD" stroke-width="1.5"/>
+      <path d="M 0 0 Q 70 20 130 0 Q 70 -20 0 0" fill="none" stroke="#93C5FD" stroke-width="1.5"/>
+      <path d="M 0 0 Q 20 70 0 130 Q -20 70 0 0" fill="none" stroke="#93C5FD" stroke-width="1.5"/>
+    </g>
+
+    <!-- Stylized Silver Lion (Left, Facing Right) -->
+    <g id="lionLeft">
+      <path d="M 120 160 C 125 140 140 115 165 110 C 185 106 205 118 215 130 C 225 120 245 110 260 125 C 275 140 270 160 265 175 C 285 180 305 190 325 210 C 310 220 290 225 270 220 C 255 240 230 250 205 248 C 180 246 160 235 150 215 C 135 220 125 210 120 190 Z" fill="url(#silverGrad)" opacity="0.95"/>
+      <path d="M 245 110 C 255 95 275 90 290 100 C 305 110 305 125 295 138 C 285 148 270 145 255 135 Z" fill="url(#silverGrad)"/>
+      <path d="M 285 115 L 315 122 L 310 135 L 285 132 Z" fill="#E2E8F0"/>
+      <path d="M 255 175 L 265 245 L 280 250 L 285 242 L 275 175 Z" fill="url(#silverGrad)"/>
+      <path d="M 235 180 L 245 240 L 255 245 L 258 238 L 248 180 Z" fill="#CBD5E1"/>
+      <path d="M 160 195 L 150 250 L 165 255 L 175 248 L 180 195 Z" fill="url(#silverGrad)"/>
+      <path d="M 185 195 L 180 248 L 195 252 L 200 245 L 202 195 Z" fill="#CBD5E1"/>
+      <path d="M 130 180 C 105 175 85 155 75 130 C 70 115 80 105 90 115 C 95 122 90 135 100 148 C 110 160 120 170 130 175 Z" fill="url(#silverGrad)"/>
+      <path d="M 75 125 C 65 115 65 95 78 98 C 88 100 88 115 75 125 Z" fill="url(#silverGrad)"/>
+    </g>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" fill="url(#bgGrad)"/>
+
+  <!-- Ornate Decorative Borders & Mandalas -->
+  <use href="#mandalaCorner" x="0" y="0"/>
+  <use href="#mandalaCorner" x="1200" y="0" transform="scale(-1, 1)"/>
+  <use href="#mandalaCorner" x="0" y="360" transform="scale(1, -1)"/>
+  <use href="#mandalaCorner" x="1200" y="360" transform="scale(-1, -1)"/>
+
+  <!-- Top & Bottom Dividing Borders -->
+  <line x1="100" y1="20" x2="1100" y2="20" stroke="url(#silverGrad)" stroke-width="1" opacity="0.3"/>
+  <line x1="200" y1="26" x2="1000" y2="26" stroke="#60A5FA" stroke-width="1.5" opacity="0.4"/>
+  <line x1="100" y1="340" x2="1100" y2="340" stroke="url(#silverGrad)" stroke-width="1" opacity="0.3"/>
+  <line x1="200" y1="334" x2="1000" y2="334" stroke="#60A5FA" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Left Lion -->
+  <g transform="translate(40, 25)">
+    <use href="#lionLeft"/>
+  </g>
+
+  <!-- Right Lion (Mirrored) -->
+  <g transform="translate(1160, 25) scale(-1, 1)">
+    <use href="#lionLeft"/>
+  </g>
+
+  <!-- Center Framing Box for Senior DevOps • DevSecOps -->
+  <g transform="translate(600, 150)">
+    <!-- Outer Glow -->
+    <rect x="-260" y="-70" width="520" height="140" rx="8" fill="none" stroke="#60A5FA" stroke-width="2" opacity="0.4" filter="url(#glow)"/>
+    <!-- Solid Silver Double Border -->
+    <rect x="-255" y="-65" width="510" height="130" rx="6" fill="#0A1538" fill-opacity="0.85" stroke="url(#silverGrad)" stroke-width="3"/>
+    <rect x="-247" y="-57" width="494" height="114" rx="4" fill="none" stroke="url(#silverGrad)" stroke-width="1" opacity="0.6"/>
+
+    <!-- SENIOR DEVOPS • DEVSECOPS TEXT -->
+    <text x="0" y="-12" text-anchor="middle" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="40" font-weight="900" fill="#FFFFFF" letter-spacing="6">
+      SENIOR DEVOPS
+    </text>
+    <text x="0" y="32" text-anchor="middle" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="38" font-weight="900" fill="url(#silverGrad)" letter-spacing="7">
+      DEVSECOPS
+    </text>
+  </g>
+
+  <!-- Professional Subtitle Script Text -->
+  <text x="600" y="270" text-anchor="middle" font-family="'Brush Script MT', 'Lucida Calligraphy', 'Segoe Script', cursive, sans-serif" font-size="34" font-style="italic" fill="#E2E8F0" letter-spacing="1">
+    Enterprise Cloud Architecture &amp; Automation
+  </text>
+
+  <!-- Bottom Pillar Tagline -->
+  <text x="600" y="305" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#93C5FD" letter-spacing="3" opacity="0.9">
+    INFRASTRUCTURE • APPLICATION SYSTEM DESIGN • LANDING ZONES
+  </text>
+</svg>
